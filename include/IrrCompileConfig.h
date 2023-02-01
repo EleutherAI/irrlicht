@@ -43,7 +43,8 @@
 //! So defines can be controlled from Makefiles or Projectfiles which allows building
 //! different library versions without having to change the sources.
 //! Example: NO_IRR_COMPILE_WITH_X11_ would disable X11
-
+#define _IRR_COMPILE_WITH_SDL_DEVICE_
+// TODO the BUILD_HEADLESS flag does not seem to work -> needs fix
 #ifdef BUILD_HEADLESS
 #define _IRR_COMPILE_WITH_SDL_DEVICE_
 #endif
@@ -173,7 +174,8 @@ If not defined, Windows Multimedia library is used, which offers also broad supp
 //! Define _IRR_COMPILE_WITH_OPENGL_ to compile the Irrlicht engine with OpenGL.
 /** If you do not wish the engine to be compiled with OpenGL, comment this
 define out. */
-#define _IRR_COMPILE_WITH_OPENGL_
+// TODO only disable when BUILD_HEADLESS is enabled
+//#define _IRR_COMPILE_WITH_OPENGL_
 #ifdef NO_IRR_COMPILE_WITH_OPENGL_
 #undef _IRR_COMPILE_WITH_OPENGL_
 #endif
