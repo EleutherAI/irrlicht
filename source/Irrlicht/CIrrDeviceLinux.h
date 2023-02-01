@@ -137,9 +137,8 @@ namespace irr
 
 		void initXInput2();
 
-		bool switchToFullscreen();
-
 #ifdef _IRR_COMPILE_WITH_X11_
+		bool switchToFullscreen();
 		bool createInputContext();
 		void destroyInputContext();
 		EKEY_CODE getKeyCode(XEvent &event);

@@ -252,7 +252,7 @@ int IrrPrintXError(Display *display, XErrorEvent *event)
 }
 #endif
 
-
+#if defined(_IRR_COMPILE_WITH_X11_)
 bool CIrrDeviceLinux::switchToFullscreen()
 {
 	if (!CreationParams.Fullscreen)
@@ -280,6 +280,7 @@ bool CIrrDeviceLinux::switchToFullscreen()
 
 	return true;
 }
+#endif
 
 
 #if defined(_IRR_COMPILE_WITH_X11_)
